@@ -1,4 +1,62 @@
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Coda:wght@400;800&display=swap");
+header {
+  min-height: 450px;
+  background: url("/assets/img/bg.svg") center;
+  background-size: cover;
+}
+header #headerLeftSide img {
+  max-width: 350px;
+}
+header #headerRightSide {
+  color: #fff;
+}
+header #headerRightSide h1,
+header #headerRightSide p:first-child,
+header #headerRightSide h1 + p {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: bold;
+}
+header #headerRightSide p {
+  font-size: 1rem;
+}
+header #headerRightSide p:first-child {
+  font-size: 2rem;
+}
+header #headerRightSide h1 {
+  color: #00d1de;
+  font-size: 2.5rem;
+}
+header #headerRightSide h1 + p {
+  font-size: 1.2rem;
+}
+header #headerRightSide h1 + p span {
+  color: #00d1de;
+}
+header #headerRightSide h1 + p::after {
+  content: "";
+  display: block;
+  width: 25%;
+  height: 3px;
+  background-color: #00d1de;
+  position: relative;
+  left: 0;
+  margin: 20px 0;
+}
+header #headerRightSide a {
+  transition: 0.3s ease-in-out;
+}
+header #headerRightSide a:hover {
+  color: #00d1de;
+}
+
+@media (max-width: 768px) {
+  header #headerLeftSide img {
+    max-width: 250px;
+  }
+  header #headerRightSide h1 + p::after {
+    margin: 20px auto;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -6,5 +64,7 @@
 }
 
 body {
+  background: url("/assets/img/bg2.svg") no-repeat top;
+  background-color: #01080e !important;
   font-family: "Coda", sans-serif !important;
 }

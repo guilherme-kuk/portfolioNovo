@@ -2,3 +2,20 @@
 
 $fontFamilyText: "Coda", sans-serif;
 $fontFamilyTitle: "Chakra Petch", sans-serif;
+
+$corPrimaria: #00d1de;
+$corSecundaria: #cccccc;
+$corEscuro: #01080e;
+$branco: #fff;
+$linearPrimario: linear-gradient(
+	180deg,
+	rgba($corPrimaria, 0.5) 0%,
+	rgba($branco, 0) 100%
+);
+$linearSecundario: linear-gradient(
+	180deg,
+	rgba($corEscuro, 0.5) 0%,
+	rgba($branco, 0) 100%
+);
+$opacityPrimario50: rgba($corPrimaria, 0.5);
+$opacityPrimario20: rgba($corPrimaria, 0.2);

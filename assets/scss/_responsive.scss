@@ -1,0 +1,18 @@
+@media (max-width: 768px) {
+	header {
+		#headerLeftSide {
+			img {
+				max-width: 250px;
+			}
+		}
+		#headerRightSide {
+			h1 {
+				+ p {
+					&::after {
+						margin: 20px auto;
+					}
+				}
+			}
+		}
+	}
+}
