@@ -1,0 +1,44 @@
+#habilities {
+	h2 {
+		@include line-title;
+	}
+
+	.div-card {
+		@include card-alternate-colors; // mixin background
+		transition: 0.3s ease-in-out;
+		cursor: default;
+
+		&:hover {
+			transform: translateY(-10px);
+		}
+		.card {
+			height: 200px;
+			border: none;
+			color: $branco;
+			.card-body {
+				.card-title {
+					font-family: $fontFamilyTitle;
+					font-size: 1.5rem;
+
+					i {
+						font-size: 3rem;
+					}
+
+					//icone para c#
+					span {
+						background-color: $branco;
+						border-radius: 10px;
+						color: $corEscuro;
+						font-size: 1rem;
+						padding: 10px;
+						font-weight: bold;
+					}
+				}
+
+				.card-text {
+					font-size: 0.9rem;
+				}
+			}
+		}
+	}
+}

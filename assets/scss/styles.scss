@@ -1,6 +1,8 @@
 @import "_variables.scss";
+@import "_mixins.scss";
 @import "_header.scss";
 @import "_responsive.scss";
+@import "_habilities.scss";
 
 * {
 	margin: 0;
@@ -12,6 +14,22 @@ body {
 	background: url("/assets/img/bg2.svg") no-repeat top;
 	background-color: $corEscuro !important;
 	font-family: $fontFamilyText !important;
+
+	// Icons
+	i {
+		color: $branco;
+	}
+
+	h2 {
+		color: $branco;
+		font-family: $fontFamilyTitle;
+		font-weight: bold;
+		font-size: 2.5rem;
+	}
+
+	.span-color {
+		color: $corPrimaria;
+	}
 }
 
 // Tooltip

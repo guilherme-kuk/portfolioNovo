@@ -1,0 +1,56 @@
+//Mixin para after titulos das seções.
+@mixin line-title() {
+	&::after,
+	&::before {
+		content: "";
+		display: block;
+		width: 280px;
+		height: 2px;
+		background-color: $corPrimaria;
+		position: relative;
+	}
+	&::after {
+		left: 0;
+		top: 5px;
+	}
+	&::before {
+		left: 50px;
+		top: 65px;
+	}
+
+	@media (max-width: 500px) {
+		&::after,
+		&::before {
+			width: 200px;
+		}
+		&::before {
+			top: 45px;
+		}
+	}
+
+	@media (max-width: 300px) {
+		&::after,
+		&::before {
+			content: none;
+		}
+	}
+}
+
+//Mixin para pintar background cards
+@mixin card-alternate-colors {
+	@for $i from 1 through 8 {
+		$color: if(
+			$i <= 4,
+			if($i % 2 == 1, $linearPrimario, $linearSecundario),
+			if($i % 2 == 1, $linearSecundario, $linearPrimario)
+		);
+		$margin-top: if($i % 2 == 0, 2rem, 0);
+
+		&:nth-child(#{$i}) {
+			.card {
+				background: $color;
+				margin-top: $margin-top;
+			}
+		}
+	}
+}

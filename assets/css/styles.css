@@ -29,9 +29,6 @@ header #headerRightSide h1 {
 header #headerRightSide h1 + p {
   font-size: 1.2rem;
 }
-header #headerRightSide h1 + p span {
-  color: #00d1de;
-}
 header #headerRightSide h1 + p::after {
   content: "";
   display: block;
@@ -57,6 +54,103 @@ header #headerRightSide a:hover {
     margin: 20px auto;
   }
 }
+@media (max-width: 500px) {
+  body h2 {
+    font-size: 1.5rem !important;
+  }
+}
+#habilities h2::after, #habilities h2::before {
+  content: "";
+  display: block;
+  width: 280px;
+  height: 2px;
+  background-color: #00d1de;
+  position: relative;
+}
+#habilities h2::after {
+  left: 0;
+  top: 5px;
+}
+#habilities h2::before {
+  left: 50px;
+  top: 65px;
+}
+@media (max-width: 500px) {
+  #habilities h2::after, #habilities h2::before {
+    width: 200px;
+  }
+  #habilities h2::before {
+    top: 45px;
+  }
+}
+@media (max-width: 300px) {
+  #habilities h2::after, #habilities h2::before {
+    content: none;
+  }
+}
+#habilities .div-card {
+  transition: 0.3s ease-in-out;
+  cursor: default;
+}
+#habilities .div-card:nth-child(1) .card {
+  background: linear-gradient(180deg, rgba(0, 209, 222, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  margin-top: 0;
+}
+#habilities .div-card:nth-child(2) .card {
+  background: linear-gradient(180deg, rgba(50, 50, 50, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  margin-top: 2rem;
+}
+#habilities .div-card:nth-child(3) .card {
+  background: linear-gradient(180deg, rgba(0, 209, 222, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  margin-top: 0;
+}
+#habilities .div-card:nth-child(4) .card {
+  background: linear-gradient(180deg, rgba(50, 50, 50, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  margin-top: 2rem;
+}
+#habilities .div-card:nth-child(5) .card {
+  background: linear-gradient(180deg, rgba(50, 50, 50, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  margin-top: 0;
+}
+#habilities .div-card:nth-child(6) .card {
+  background: linear-gradient(180deg, rgba(0, 209, 222, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  margin-top: 2rem;
+}
+#habilities .div-card:nth-child(7) .card {
+  background: linear-gradient(180deg, rgba(50, 50, 50, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  margin-top: 0;
+}
+#habilities .div-card:nth-child(8) .card {
+  background: linear-gradient(180deg, rgba(0, 209, 222, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  margin-top: 2rem;
+}
+#habilities .div-card:hover {
+  transform: translateY(-10px);
+}
+#habilities .div-card .card {
+  height: 200px;
+  border: none;
+  color: #fff;
+}
+#habilities .div-card .card .card-body .card-title {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 1.5rem;
+}
+#habilities .div-card .card .card-body .card-title i {
+  font-size: 3rem;
+}
+#habilities .div-card .card .card-body .card-title span {
+  background-color: #fff;
+  border-radius: 10px;
+  color: #01080e;
+  font-size: 1rem;
+  padding: 10px;
+  font-weight: bold;
+}
+#habilities .div-card .card .card-body .card-text {
+  font-size: 0.9rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -67,6 +161,18 @@ body {
   background: url("/assets/img/bg2.svg") no-repeat top;
   background-color: #01080e !important;
   font-family: "Coda", sans-serif !important;
+}
+body i {
+  color: #fff;
+}
+body h2 {
+  color: #fff;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+body .span-color {
+  color: #00d1de;
 }
 
 .custom-tooltip .tooltip-inner {
