@@ -68,3 +68,22 @@ body {
   background-color: #01080e !important;
   font-family: "Coda", sans-serif !important;
 }
+
+.custom-tooltip .tooltip-inner {
+  background-color: #00d1de;
+  color: #01080e;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.custom-tooltip[data-popper-placement^=top] .tooltip-arrow::before {
+  border-top-color: #00d1de !important;
+}
+.custom-tooltip[data-popper-placement^=right] .tooltip-arrow::before {
+  border-right-color: #00d1de !important;
+}
+.custom-tooltip[data-popper-placement^=bottom] .tooltip-arrow::before {
+  border-bottom-color: #00d1de !important;
+}
+.custom-tooltip[data-popper-placement^=left] .tooltip-arrow::before {
+  border-left-color: #00d1de !important;
+}

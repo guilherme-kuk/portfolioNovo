@@ -13,3 +13,28 @@ body {
 	background-color: $corEscuro !important;
 	font-family: $fontFamilyText !important;
 }
+
+// Tooltip
+
+.custom-tooltip {
+	.tooltip-inner {
+		background-color: $corPrimaria;
+		color: $corEscuro;
+		font-weight: 600;
+		font-size: 0.8rem;
+	}
+
+	$placements: top right bottom left;
+
+	@each $placement in $placements {
+		$color-property: "border-#{$placement}-color";
+
+		&[data-popper-placement^="#{$placement}"] {
+			.tooltip-arrow {
+				&::before {
+					#{$color-property}: $corPrimaria !important;
+				}
+			}
+		}
+	}
+}
