@@ -37,13 +37,27 @@
 }
 
 //Mixin para pintar background cards
-@mixin card-alternate-colors {
+@mixin card-alternate-colors-responsive {
 	@for $i from 1 through 8 {
 		$color: if(
 			$i <= 4,
 			if($i % 2 == 1, $linearPrimario, $linearSecundario),
 			if($i % 2 == 1, $linearSecundario, $linearPrimario)
 		);
+		$margin-top: if($i % 2 == 0, 2rem, 0);
+
+		&:nth-child(#{$i}) {
+			.card {
+				background: $color !important;
+				margin-top: $margin-top !important;
+			}
+		}
+	}
+}
+
+@mixin card-alternate-colors {
+	@for $i from 1 through 8 {
+		$color: if($i % 2 == 1, $linearPrimario, $linearSecundario);
 		$margin-top: if($i % 2 == 0, 2rem, 0);
 
 		&:nth-child(#{$i}) {

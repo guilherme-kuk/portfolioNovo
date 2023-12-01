@@ -46,6 +46,11 @@ header #headerRightSide a:hover {
   color: #00d1de;
 }
 
+@media (max-width: 992px) {
+  #habilities .div-card .card {
+    margin-top: 0 !important;
+  }
+}
 @media (max-width: 768px) {
   header #headerLeftSide img {
     max-width: 250px;
@@ -57,6 +62,40 @@ header #headerRightSide a:hover {
 @media (max-width: 500px) {
   body h2 {
     font-size: 1.5rem !important;
+  }
+}
+@media (min-width: 1200px) {
+  #habilities .div-card:nth-child(1) .card {
+    background: linear-gradient(180deg, rgba(0, 209, 222, 0.5) 0%, rgba(255, 255, 255, 0) 100%) !important;
+    margin-top: 0 !important;
+  }
+  #habilities .div-card:nth-child(2) .card {
+    background: linear-gradient(180deg, rgba(50, 50, 50, 0.5) 0%, rgba(255, 255, 255, 0) 100%) !important;
+    margin-top: 2rem !important;
+  }
+  #habilities .div-card:nth-child(3) .card {
+    background: linear-gradient(180deg, rgba(0, 209, 222, 0.5) 0%, rgba(255, 255, 255, 0) 100%) !important;
+    margin-top: 0 !important;
+  }
+  #habilities .div-card:nth-child(4) .card {
+    background: linear-gradient(180deg, rgba(50, 50, 50, 0.5) 0%, rgba(255, 255, 255, 0) 100%) !important;
+    margin-top: 2rem !important;
+  }
+  #habilities .div-card:nth-child(5) .card {
+    background: linear-gradient(180deg, rgba(50, 50, 50, 0.5) 0%, rgba(255, 255, 255, 0) 100%) !important;
+    margin-top: 0 !important;
+  }
+  #habilities .div-card:nth-child(6) .card {
+    background: linear-gradient(180deg, rgba(0, 209, 222, 0.5) 0%, rgba(255, 255, 255, 0) 100%) !important;
+    margin-top: 2rem !important;
+  }
+  #habilities .div-card:nth-child(7) .card {
+    background: linear-gradient(180deg, rgba(50, 50, 50, 0.5) 0%, rgba(255, 255, 255, 0) 100%) !important;
+    margin-top: 0 !important;
+  }
+  #habilities .div-card:nth-child(8) .card {
+    background: linear-gradient(180deg, rgba(0, 209, 222, 0.5) 0%, rgba(255, 255, 255, 0) 100%) !important;
+    margin-top: 2rem !important;
   }
 }
 #habilities h2::after, #habilities h2::before {
@@ -109,19 +148,19 @@ header #headerRightSide a:hover {
   margin-top: 2rem;
 }
 #habilities .div-card:nth-child(5) .card {
-  background: linear-gradient(180deg, rgba(50, 50, 50, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(180deg, rgba(0, 209, 222, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
   margin-top: 0;
 }
 #habilities .div-card:nth-child(6) .card {
-  background: linear-gradient(180deg, rgba(0, 209, 222, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(180deg, rgba(50, 50, 50, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
   margin-top: 2rem;
 }
 #habilities .div-card:nth-child(7) .card {
-  background: linear-gradient(180deg, rgba(50, 50, 50, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(180deg, rgba(0, 209, 222, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
   margin-top: 0;
 }
 #habilities .div-card:nth-child(8) .card {
-  background: linear-gradient(180deg, rgba(0, 209, 222, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(180deg, rgba(50, 50, 50, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
   margin-top: 2rem;
 }
 #habilities .div-card:hover {

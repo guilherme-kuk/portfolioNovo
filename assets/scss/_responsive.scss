@@ -1,3 +1,12 @@
+@media (max-width: 992px) {
+	#habilities {
+		.div-card {
+			.card {
+				margin-top: 0 !important;
+			}
+		}
+	}
+}
 @media (max-width: 768px) {
 	header {
 		#headerLeftSide {
@@ -21,6 +30,16 @@
 	body {
 		h2 {
 			font-size: 1.5rem !important;
+		}
+	}
+}
+
+//Min-width
+
+@media (min-width: 1200px) {
+	#habilities {
+		.div-card {
+			@include card-alternate-colors-responsive; // mixin background
 		}
 	}
 }
