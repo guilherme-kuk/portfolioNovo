@@ -292,6 +292,61 @@ header #headerRightSide a:hover {
   transform: translate(0%, -50%) translate3d(0, 0, 0);
 }
 
+.skills {
+  position: relative;
+}
+.skills h2::after, .skills h2::before {
+  content: "";
+  display: block;
+  width: 280px;
+  height: 2px;
+  background-color: #00d1de;
+  position: relative;
+}
+.skills h2::after {
+  left: 0;
+  top: 5px;
+}
+.skills h2::before {
+  left: 50px;
+  top: 65px;
+}
+@media (max-width: 500px) {
+  .skills h2::after, .skills h2::before {
+    width: 200px;
+  }
+  .skills h2::before {
+    top: 45px;
+  }
+}
+@media (max-width: 300px) {
+  .skills h2::after, .skills h2::before {
+    content: none;
+  }
+}
+.skills .container {
+  position: absolute;
+  inset: 0;
+}
+.skills canvas {
+  z-index: 1;
+  position: relative;
+  opacity: 0.5;
+  max-height: 450px;
+}
+.skills .card {
+  border: none;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+.skills .card .card-body .card-title i {
+  color: #00d1de;
+}
+.skills .card .card-body .card-text {
+  color: #cccccc;
+}
+
 * {
   margin: 0;
   padding: 0;
