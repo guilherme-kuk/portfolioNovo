@@ -1,0 +1,76 @@
+#projects {
+	background: $opacityPrimario20;
+	color: $branco;
+	backdrop-filter: blur(10px);
+
+	h2 {
+		@include line-title;
+	}
+
+	.project {
+		font-family: $fontFamilyTitle;
+		border-top: 1px solid $corPrimaria;
+		position: relative;
+		overflow: hidden;
+		line-height: 1;
+
+		&:last-child {
+			border-bottom: 1px solid $corPrimaria;
+		}
+
+		h3 {
+			font-size: 3rem;
+			transition: 0.8s ease;
+		}
+		.number-project {
+			h3 {
+				opacity: 0.5;
+			}
+		}
+
+		.description-project {
+			font-size: 1.2rem;
+			opacity: 0.8;
+
+			p {
+				margin-bottom: 0;
+			}
+		}
+
+		.bg-preview-project {
+			height: 100px;
+			width: 100px;
+			border-radius: 50%;
+			background-color: $corPrimaria;
+			font-size: 1.2rem;
+			color: $branco;
+			transition: 0.5s ease-in-out;
+			border: none;
+
+			&:hover {
+				opacity: 0.7;
+				transform: scale(1.2);
+			}
+		}
+
+		.img-project {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translate(0%, -50%) translate3d(300px, 0, 0);
+			transition: 0.8s ease;
+			max-width: 300px;
+			z-index: -1;
+			filter: brightness(0.8);
+		}
+
+		&:hover {
+			h3 {
+				transform: translate3d(32px, 0, 0);
+			}
+			.img-project {
+				transform: translate(0%, -50%) translate3d(0, 0, 0);
+			}
+		}
+	}
+}

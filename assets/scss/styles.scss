@@ -3,6 +3,7 @@
 @import "_header.scss";
 @import "_responsive.scss";
 @import "_habilities.scss";
+@import "_projects.scss";
 
 * {
 	margin: 0;
@@ -51,6 +52,32 @@ body {
 			.tooltip-arrow {
 				&::before {
 					#{$color-property}: $corPrimaria !important;
+				}
+			}
+		}
+	}
+}
+
+.custom-tooltip-project {
+	.tooltip-inner {
+		background-color: $branco;
+		color: $corEscuro;
+		font-weight: 600;
+		font-size: 0.8rem;
+		i {
+			color: $corEscuro;
+		}
+	}
+
+	$placements: top right bottom left;
+
+	@each $placement in $placements {
+		$color-property: "border-#{$placement}-color";
+
+		&[data-popper-placement^="#{$placement}"] {
+			.tooltip-arrow {
+				&::before {
+					#{$color-property}: $branco !important;
 				}
 			}
 		}
