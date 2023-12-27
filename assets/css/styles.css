@@ -26,10 +26,10 @@ header #headerRightSide h1 {
   color: #00d1de;
   font-size: 2.5rem;
 }
-header #headerRightSide h1 + p {
-  font-size: 1.2rem;
+header #headerRightSide h2 {
+  font-size: 1.5rem;
 }
-header #headerRightSide h1 + p::after {
+header #headerRightSide h2::after {
   content: "";
   display: block;
   width: 25%;

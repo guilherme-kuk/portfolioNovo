@@ -27,19 +27,18 @@ header {
 		h1 {
 			color: $corPrimaria;
 			font-size: 2.5rem;
-
-			+ p {
-				font-size: 1.2rem;
-				&::after {
-					content: "";
-					display: block;
-					width: 25%;
-					height: 3px;
-					background-color: $corPrimaria;
-					position: relative;
-					left: 0;
-					margin: 20px 0;
-				}
+		}
+		h2 {
+			font-size: 1.5rem;
+			&::after {
+				content: "";
+				display: block;
+				width: 25%;
+				height: 3px;
+				background-color: $corPrimaria;
+				position: relative;
+				left: 0;
+				margin: 20px 0;
 			}
 		}
 
