@@ -14,6 +14,7 @@
 			crossorigin="anonymous"
 		/>
 		<!--#endregion Styles -->
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 		<title>Guilherme Kuk | Full-Stack Developer</title>
 	</head>
 
@@ -264,7 +265,173 @@
 					</div>
 				</div>
 			</section>
+
+			<section class="container mt-5" id="contact">
+				<h2>Entre em <span class="span-color">contato</span></h2>
+				<div class="row mt-5">
+					<div class="col-md-8" id="contact-left-side">
+						<form
+							id="formContact"
+							action="https://formsubmit.co/guilhermekuk@gmail.com"
+							method="POST"
+						>
+							<input
+								type="hidden"
+								name="_next"
+								value="http://127.0.0.1:5500/#contact"
+							/>
+							<input type="hidden" name="_template" value="table" />
+							<input type="hidden" name="_captcha" value="false" />
+							<div class="row">
+								<div class="mb-3 col-md-6">
+									<label for="name" class="form-label mb-0"
+										>Nome <span class="text-danger">*</span></label
+									>
+									<div class="input-group mt-1">
+										<i
+											class="fa-solid fa-user input-group-text contact-icon"
+										></i>
+										<input
+											type="text"
+											class="form-control"
+											id="name"
+											name="name"
+											maxlength="50"
+											autocomplete="off"
+										/>
+										<div class="invalid-feedback name-feedback">
+											<span>Informe o nome.</span>
+										</div>
+									</div>
+								</div>
+								<div class="mb-3 col-md-6">
+									<label for="email" class="form-label mb-0"
+										>E-mail <span class="text-danger">*</span></label
+									>
+									<div class="input-group mt-1">
+										<i
+											class="fa-solid fa-envelope input-group-text contact-icon"
+										></i>
+										<input
+											type="text"
+											name="email"
+											class="form-control"
+											id="email"
+											maxlength="50"
+											autocomplete="off"
+										/>
+										<div class="invalid-feedback email-feedback">
+											<span>Informe um e-mail válido.</span>
+										</div>
+									</div>
+								</div>
+								<div class="mb-3 col-12 position-relative">
+									<label class="form-label" for="message"
+										>Mensagem <span class="text-danger">*</span></label
+									>
+									<textarea
+										class="form-control"
+										rows="3"
+										id="message"
+										name="message"
+										maxlength="200"
+									></textarea>
+									<span id="countCaracter">0 / 200</span>
+									<div
+										class="invalid-feedback position-absolute message-feedback"
+									>
+										<span>Preencha uma mensagem.</span>
+									</div>
+								</div>
+								<div
+									class="g-recaptcha mb-3 col-12"
+									data-sitekey="6Lft9TApAAAAAJnWS59cyaVYY9SnyHkBST3HV88j"
+								></div>
+								<div id="feedbackRecaptcha" class="col-12 d-none">
+									<div
+										class="alert alert-warning alert-dismissible fade show col-lg-8 position-relative"
+										role="alert"
+									>
+										<p class="mb-0">
+											Por favor, marque a caixa "Eu não sou um robô".
+										</p>
+										<button
+											type="button"
+											class="btn-close"
+											data-bs-dismiss="alert"
+											aria-label="Close"
+										></button>
+										<div
+											id="loading"
+											class="d-none position-absolute bottom-0 start-0"
+										></div>
+									</div>
+								</div>
+								<div class="col-sm-4 col-12">
+									<button
+										type="submit"
+										class="btn btn-success w-100"
+										id="btnEnviar"
+									>
+										Enviar <i class="fa-solid fa-paper-plane"></i>
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div
+						class="col-md-4 d-flex flex-column justify-content-center mt-md-0 mt-5"
+						id="contact-right-side"
+					>
+						<div class="contact-city text-center">
+							<p>Curitiba/PR - Brasil</p>
+						</div>
+						<div class="d-flex justify-content-between mt-3 mx-auto">
+							<div class="px-0">
+								<a
+									href="https://github.com/guilherme-kuk"
+									target="_blank"
+									class="mx-3 h4"
+									data-bs-toggle="tooltip"
+									data-bs-placement="bottom"
+									data-bs-title="GitHub"
+									data-bs-custom-class="custom-tooltip"
+									><i class="fa-brands fa-github"></i
+								></a>
+								<a
+									href="https://www.linkedin.com/in/guilhermekuk/"
+									target="_blank"
+									class="mx-3 h4"
+									data-bs-toggle="tooltip"
+									data-bs-placement="bottom"
+									data-bs-title="LinkedIn"
+									data-bs-custom-class="custom-tooltip"
+									><i class="fa-brands fa-linkedin-in"></i
+								></a>
+								<a
+									href=""
+									target="_blank"
+									class="mx-3 h4"
+									data-bs-toggle="tooltip"
+									data-bs-placement="bottom"
+									data-bs-title="Resume"
+									data-bs-custom-class="custom-tooltip"
+									><i class="fa-solid fa-file-pdf"></i
+								></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
+
+		<footer class="mt-5">
+			<div
+				class="container d-flex align-items-center justify-content-center h-100"
+			>
+				<p class="mb-0">Guilherme Kuk &copy; - <span id="ano-atual"></span></p>
+			</div>
+		</footer>
 		<!--#region Scripts -->
 		<script
 			src="https://kit.fontawesome.com/b6a3f88d99.js"
@@ -285,6 +452,7 @@
 		<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 		<script src="/assets/scripts/particles.js"></script>
+		<script src="/assets/scripts/contact.js"></script>
 		<script src="/assets/scripts/scripts.js"></script>
 
 		<!--#endregion Scripts -->

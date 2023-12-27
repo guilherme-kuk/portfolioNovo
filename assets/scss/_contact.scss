@@ -1,0 +1,132 @@
+#contact {
+	h2 {
+		@include line-title;
+	}
+	#contact-left-side {
+		.form-label {
+			color: $branco;
+			font-family: $fontFamilyTitle;
+			font-weight: bold;
+		}
+
+		.form-control {
+			border-radius: 0;
+			background-color: transparent;
+			color: $corSecundaria;
+			&:focus {
+				box-shadow: none;
+				outline: none;
+			}
+		}
+		#name,
+		#email {
+			border: none;
+			border-bottom: 1px solid $corPrimaria;
+		}
+		#message {
+			border: 1px solid $corPrimaria;
+			border-top: none;
+			resize: none;
+			height: 100px;
+		}
+		.input-group {
+			.contact-icon {
+				border: none;
+				position: absolute;
+				left: 0;
+				padding-left: 0;
+				color: $corPrimaria;
+				background-color: transparent;
+				padding-bottom: 0;
+			}
+
+			.form-control {
+				padding-left: 30px;
+			}
+		}
+
+		.btn {
+			background: $corPrimaria;
+			border-radius: 0;
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			-webkit-transform: perspective(1px) translateZ(0);
+			transform: perspective(1px) translateZ(0);
+			box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+			-webkit-transition-property: color;
+			transition-property: color;
+			-webkit-transition-duration: 0.3s;
+			transition-duration: 0.3s;
+			border: none;
+
+			&::before {
+				content: "";
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: #007880;
+				-webkit-transform: scaleY(0);
+				transform: scaleY(0);
+				-webkit-transform-origin: 50%;
+				transform-origin: 50%;
+				-webkit-transition-property: transform;
+				transition-property: transform;
+				-webkit-transition-duration: 0.3s;
+				transition-duration: 0.3s;
+				-webkit-transition-timing-function: ease-out;
+				transition-timing-function: ease-out;
+			}
+
+			&:hover {
+				&::before {
+					-webkit-transform: scaleY(1);
+					transform: scaleY(1);
+				}
+			}
+		}
+
+		.invalid-feedback {
+			font-size: 0.8rem;
+		}
+
+		#countCaracter {
+			text-align: right;
+			font-size: 0.8rem;
+			display: block;
+			color: $corSecundaria;
+		}
+
+		.message-feedback {
+			bottom: -5px;
+		}
+
+		.g-recaptcha {
+			> div {
+				max-width: 100%;
+				overflow: hidden;
+			}
+		}
+
+		#feedbackRecaptcha {
+			#loading {
+				width: 0%;
+				height: 5px;
+				background-color: #ffcc32;
+				border-radius: 8px;
+			}
+		}
+	}
+	#contact-right-side {
+		.contact-city {
+			p {
+				color: $branco;
+				font-family: $fontFamilyTitle;
+				font-weight: bold;
+			}
+		}
+	}
+}
