@@ -1,18 +1,16 @@
 .skills {
 	position: relative;
+	overflow: hidden;
+	min-height: 400px;
+
 	h2 {
 		@include line-title;
 	}
-
-	.container {
-		position: absolute;
-		inset: 0;
-	}
 	canvas {
 		z-index: 1;
-		position: relative;
+		position: absolute;
 		opacity: 0.5;
-		max-height: 450px;
+		top: 0;
 	}
 
 	.card {
